@@ -1,0 +1,33 @@
+Source: ruby-web-console
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               rake,
+               ruby-actionview (>= 2:6.0~),
+               ruby-activemodel (>= 2:6.0~),
+               ruby-bindex (>= 0.4.0),
+               ruby-railties (>= 2:6.0~)
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-web-console.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-web-console
+Homepage: https://github.com/rails/web-console
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-web-console
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: Ruby on Rails debugger
+ The web console allows you to create an interactive Ruby session in your
+ browser. Those sessions are launched automatically in case on an error, but
+ they can also be launched manually in any page.
+ .
+ web-console is meant a debugging tool for Rails applications in development
+ environments.
